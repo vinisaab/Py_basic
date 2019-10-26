@@ -1,0 +1,81 @@
+Collecting pymongo[gssapi,snappy,srv,tls]
+  Using cached https://files.pythonhosted.org/packages/6d/27/f30b90f40054948b32df04a8e6355946874d084ac73755986b28d3003578/pymongo-3.9.0-cp36-cp36m-manylinux1_x86_64.whl
+Collecting pykerberos; extra == "gssapi" (from pymongo[gssapi,snappy,srv,tls])
+  Downloading https://files.pythonhosted.org/packages/9a/b8/1ec56b6fa8a2e2a81420bd3d90e70b59fc83f6b857fb2c2c37accddc8be3/pykerberos-1.2.1.tar.gz
+Collecting python-snappy; extra == "snappy" (from pymongo[gssapi,snappy,srv,tls])
+  Downloading https://files.pythonhosted.org/packages/45/35/65d9f8cc537129894b4b32647d80212d1fa342877581c5b8a69872cea8be/python-snappy-0.5.4.tar.gz
+Collecting dnspython<2.0.0,>=1.16.0; extra == "srv" (from pymongo[gssapi,snappy,srv,tls])
+  Using cached https://files.pythonhosted.org/packages/ec/d3/3aa0e7213ef72b8585747aa0e271a9523e713813b9a20177ebe1e939deb0/dnspython-1.16.0-py2.py3-none-any.whl
+Building wheels for collected packages: pykerberos, python-snappy
+  Running setup.py bdist_wheel for pykerberos: started
+  Running setup.py bdist_wheel for pykerberos: finished with status 'error'
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-bnaplisf/pykerberos/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" bdist_wheel -d /tmp/tmpryn5dpj9pip-wheel- --python-tag cp36:
+  running bdist_wheel
+  running build
+  running build_ext
+  building 'kerberos' extension
+  creating build
+  creating build/temp.linux-x86_64-3.6
+  creating build/temp.linux-x86_64-3.6/src
+  x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/python3.6m -c src/kerberos.c -o build/temp.linux-x86_64-3.6/src/kerberos.o
+  In file included from src/kerberos.c:19:0:
+  src/kerberosbasic.h:17:10: fatal error: gssapi/gssapi.h: No such file or directory
+   #include <gssapi/gssapi.h>
+            ^~~~~~~~~~~~~~~~~
+  compilation terminated.
+  error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+  
+  ----------------------------------------
+  Running setup.py clean for pykerberos
+  Running setup.py bdist_wheel for python-snappy: started
+  Running setup.py bdist_wheel for python-snappy: finished with status 'error'
+  Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-bnaplisf/python-snappy/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" bdist_wheel -d /tmp/tmp49dzti13pip-wheel- --python-tag cp36:
+  /usr/lib/python3.6/distutils/dist.py:261: UserWarning: Unknown distribution option: 'cffi_modules'
+    warnings.warn(msg)
+  running bdist_wheel
+  running build
+  running build_py
+  creating build
+  creating build/lib.linux-x86_64-3.6
+  creating build/lib.linux-x86_64-3.6/snappy
+  copying snappy/__init__.py -> build/lib.linux-x86_64-3.6/snappy
+  copying snappy/__main__.py -> build/lib.linux-x86_64-3.6/snappy
+  copying snappy/hadoop_snappy.py -> build/lib.linux-x86_64-3.6/snappy
+  copying snappy/snappy.py -> build/lib.linux-x86_64-3.6/snappy
+  copying snappy/snappy_cffi.py -> build/lib.linux-x86_64-3.6/snappy
+  copying snappy/snappy_cffi_builder.py -> build/lib.linux-x86_64-3.6/snappy
+  copying snappy/snappy_formats.py -> build/lib.linux-x86_64-3.6/snappy
+  running build_ext
+  building 'snappy._snappy' extension
+  creating build/temp.linux-x86_64-3.6
+  creating build/temp.linux-x86_64-3.6/snappy
+  x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/python3.6m -c snappy/snappymodule.cc -o build/temp.linux-x86_64-3.6/snappy/snappymodule.o
+  snappy/snappymodule.cc:31:10: fatal error: snappy-c.h: No such file or directory
+   #include <snappy-c.h>
+            ^~~~~~~~~~~~
+  compilation terminated.
+  error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+  
+  ----------------------------------------
+  Running setup.py clean for python-snappy
+Failed to build pykerberos python-snappy
+Installing collected packages: pykerberos, python-snappy, dnspython, pymongo
+  Running setup.py install for pykerberos: started
+    Running setup.py install for pykerberos: finished with status 'error'
+    Complete output from command /usr/bin/python3 -u -c "import setuptools, tokenize;__file__='/tmp/pip-build-bnaplisf/pykerberos/setup.py';f=getattr(tokenize, 'open', open)(__file__);code=f.read().replace('\r\n', '\n');f.close();exec(compile(code, __file__, 'exec'))" install --record /tmp/pip-buj8_hry-record/install-record.txt --single-version-externally-managed --compile --user --prefix=:
+    running install
+    running build
+    running build_ext
+    building 'kerberos' extension
+    creating build
+    creating build/temp.linux-x86_64-3.6
+    creating build/temp.linux-x86_64-3.6/src
+    x86_64-linux-gnu-gcc -pthread -DNDEBUG -g -fwrapv -O2 -Wall -g -fstack-protector-strong -Wformat -Werror=format-security -Wdate-time -D_FORTIFY_SOURCE=2 -fPIC -I/usr/include/python3.6m -c src/kerberos.c -o build/temp.linux-x86_64-3.6/src/kerberos.o
+    In file included from src/kerberos.c:19:0:
+    src/kerberosbasic.h:17:10: fatal error: gssapi/gssapi.h: No such file or directory
+     #include <gssapi/gssapi.h>
+              ^~~~~~~~~~~~~~~~~
+    compilation terminated.
+    error: command 'x86_64-linux-gnu-gcc' failed with exit status 1
+    
+    ----------------------------------------
